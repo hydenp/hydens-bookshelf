@@ -1,17 +1,19 @@
 import bookLogo from '../assets/open-book.png'
+import calendarLogo from '../assets/calendar.png'
 
 function Book(props) {
 
   return <div style={styles.cardBody}>
     <div style={styles.cardContentLeft}>
-      <img style={styles.bookImage} src={bookLogo} alt="Logo" />
+      <img style={styles.bookImage} src={bookLogo} alt="open-book-icon" />
       <div style={styles.titleAuthor}>
         <p style={styles.titleText}>{props.book.title}</p>
         <p style={styles.authorText}>{props.book.author}</p>
       </div>
     </div>
     <div style={styles.cardContentRight}>
-      <p>some date text</p>
+      <img style={styles.calendarImage} src={calendarLogo} alt="calendar-icon" />
+      <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate}</p>
     </div>
   </div>
 }
@@ -34,14 +36,15 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: 'orange'
+    // backgroundColor: 'orange'
   },
   cardContentRight: {
     width: '35%',
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: 'yellow'
+    padding: 20,
+    // backgroundColor: 'yellow'
   },
   bookImage: {
     width: 50,
@@ -57,6 +60,7 @@ const styles = {
     fontFamily: 'Roboto',
     fontSize: 32,
     margin: 0,
+    marginBottom: 10,
     fontWeight: 'bold',
   },
   authorText: {
@@ -64,6 +68,14 @@ const styles = {
     fontSize: 16,
     color: '#6C6C6C',
     margin: 0,
+  },
+  calendarImage: {
+    width: 25,
+    margin: 10,
+  },
+  dateText: {
+    fontFamily: 'Roboto',
+    fontSize: 16
   }
 }
 
