@@ -29,6 +29,7 @@ const styles = {
     justifyContent: 'space-evenly',
     borderRadius: 10,
     backgroundColor: "#FCFCFC",
+    boxShadow: '7px 7px 12px rgba(0, 0, 0, 0.25)'
   },
   cardContentLeft: {
     width: '65%',
@@ -57,14 +58,12 @@ const styles = {
     alignContent: 'center',
   },
   titleText: {
-    fontFamily: 'Roboto',
     fontSize: 32,
     margin: 0,
     marginBottom: 10,
     fontWeight: 'bold',
   },
   authorText: {
-    fontFamily: 'Roboto',
     fontSize: 16,
     color: '#6C6C6C',
     margin: 0,
@@ -74,8 +73,8 @@ const styles = {
     margin: 10,
   },
   dateText: {
-    fontFamily: 'Roboto',
     fontSize: 16
+    // margin
   }
 }
 
