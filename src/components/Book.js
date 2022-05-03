@@ -31,12 +31,13 @@ function Book(props) {
 
       {/*Back of Card */}
       <div style={styles.cardBody} onClick={handleClick}>
-        <div style={{backgroundColor: 'green', width: '100%'}}>
+        {/*<div style={{backgroundColor: 'green', width: '100%'}}>*/}
+        <div style={{width: '100%', padding: 20}}>
           <p style={styles.titleText}>TL;DR</p>
-          <p>Here is some content about the book </p>
+          <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
         </div>
-        <div style={{backgroundColor: 'blue', width: 225}}>
-          <p>rating will go here</p>
+        <div style={{backgroundColor: 'blue', width: 225, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <p style={{backgroundColor: 'red', padding: 10}}>rating will go here</p>
         </div>
       </div>
     </ReactCardFlip>
@@ -71,7 +72,6 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: 'orange'
   },
   cardContentRight: {
     width: '35%',
