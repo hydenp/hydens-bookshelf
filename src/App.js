@@ -24,8 +24,9 @@ function App() {
   // console.log(data.books[0])
   return (
     <div style={styles.pagContent}>
-      <p style={styles.titleText}>Hyden's BookShelf</p>
-
+      <div style={styles.titleContainer}>
+        <p style={styles.titleText}>Hyden's BookShelf</p>
+      </div>
       <div style={styles.quotesDiv}>
         <div style={styles.quote}>
           <p style={styles.quoteText}>“I just sit in my office and read all day.”</p>
@@ -42,6 +43,10 @@ function App() {
       <div style={styles.listContainer}>
         <Book book={data.books[0]}/>
         <Book book={data.books[1]}/>
+        <Book book={data.books[1]}/>
+        <Book book={data.books[1]}/>
+        <Book book={data.books[1]}/>
+        <Book book={data.books[1]}/>
       </div>
     </div>
   );
@@ -49,28 +54,37 @@ function App() {
 
 const styles = {
   pagContent: {
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     display: 'flex',
     alignSelf: 'center',
     flexDirection: 'column',
     justifyContent:'center',
     alignItems: 'center'
   },
+  titleContainer: {
+    textAlign: 'center',
+    width: '100%',
+    backgroundColor: 'white',
+    position: 'sticky',
+    top: 0,
+    padding: 40,
+  },
   listContainer: {
     width: '70%',
     display: 'flex',
     flexDirection: 'column',
     alignItems:'center',
-    backgroundColor: 'blue'
+    // backgroundColor: 'blue'
   },
   titleText: {
     fontFamily: 'Roboto',
     fontSize: 64,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    margin: 0
   },
   quotesDiv: {
-    width: '80%',
-    backgroundColor: 'purple',
+    width: '70%',
+    // backgroundColor: 'purple',
     padding: 20
   },
   quote: {
@@ -78,7 +92,7 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
     margin: 5,
-    backgroundColor: 'green'
+    // backgroundColor: 'green'
   },
   quoteText: {
     fontSize: 24,
