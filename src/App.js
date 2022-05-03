@@ -20,12 +20,11 @@ const data = {
 
 function App() {
 
-  // console.log(data.books)
-  // console.log(data.books[0])
   return (
     <div style={styles.pagContent}>
       <div style={styles.titleContainer}>
-        <p style={styles.titleText}>Hyden's BookShelf</p>
+        <p style={styles.titleText}>Hyden's Bookshelf</p>
+        <div style={styles.gradientDiv}></div>
       </div>
       <div style={styles.quotesDiv}>
         <div style={styles.quote}>
@@ -54,7 +53,6 @@ function App() {
 
 const styles = {
   pagContent: {
-    // backgroundColor: 'red',
     display: 'flex',
     alignSelf: 'center',
     flexDirection: 'column',
@@ -64,27 +62,29 @@ const styles = {
   titleContainer: {
     textAlign: 'center',
     width: '100%',
-    backgroundColor: 'white',
     position: 'sticky',
     top: 0,
-    padding: 40,
+  },
+  gradientDiv: {
+    height: 50,
+    background: 'linear-gradient(white, transparent 100%)',
   },
   listContainer: {
     width: '70%',
     display: 'flex',
     flexDirection: 'column',
     alignItems:'center',
-    // backgroundColor: 'blue'
   },
   titleText: {
     fontFamily: 'Roboto',
     fontSize: 64,
     fontWeight: 'bold',
-    margin: 0
+    backgroundColor: 'white',
+    margin: 0,
+    paddingTop: 50
   },
   quotesDiv: {
     width: '70%',
-    // backgroundColor: 'purple',
     padding: 20
   },
   quote: {
@@ -92,7 +92,6 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
     margin: 5,
-    // backgroundColor: 'green'
   },
   quoteText: {
     fontSize: 24,
