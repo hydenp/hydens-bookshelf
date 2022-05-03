@@ -64,6 +64,7 @@ const styles = {
     width: '100%',
     position: 'sticky',
     top: 0,
+    zIndex: 1000
   },
   gradientDiv: {
     height: 50,
@@ -74,6 +75,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems:'center',
+    // backgroundColor: 'purple'
   },
   titleText: {
     fontFamily: 'Roboto',
