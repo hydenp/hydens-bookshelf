@@ -1,5 +1,5 @@
 import './App.css';
-import Book from './components/Book'
+import BookCard from './components/BookCard'
 
 const data = {
   books : [
@@ -7,14 +7,23 @@ const data = {
       title: 'Fortune\'s Formula',
       author: 'William Poundstone',
       startDate: 'April 27',
-      endDate: 'May 5'
+      endDate: '',
+      rating: 0
     },
     {
       title: 'Huckleberry Finn',
       author: 'Mark Twain',
       startDate: 'April 27',
-      endDate: 'May 5'
-    }
+      endDate: 'May 5',
+      rating: 2
+    },
+    {
+      title: 'Atomic Habit',
+      author: 'James Clear',
+      startDate: 'Jan 28',
+      endDate: 'Feb 5',
+      rating: 3
+    },
   ]
 }
 
@@ -40,12 +49,12 @@ function App() {
       </div>
 
       <div style={styles.listContainer}>
-        <Book book={data.books[0]}/>
-        <Book book={data.books[1]}/>
-        <Book book={data.books[1]}/>
-        <Book book={data.books[1]}/>
-        <Book book={data.books[1]}/>
-        <Book book={data.books[1]}/>
+        <BookCard book={data.books[0]}/>
+        <BookCard book={data.books[1]}/>
+        <BookCard book={data.books[2]}/>
+        <BookCard book={data.books[1]}/>
+        <BookCard book={data.books[1]}/>
+        <BookCard book={data.books[1]}/>
       </div>
     </div>
   );
@@ -75,7 +84,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems:'center',
-    // backgroundColor: 'purple'
   },
   titleText: {
     fontFamily: 'Roboto',

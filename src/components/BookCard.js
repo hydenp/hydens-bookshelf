@@ -3,8 +3,9 @@ import ReactCardFlip from 'react-card-flip';
 
 import bookLogo from '../assets/open-book.png'
 import calendarLogo from '../assets/calendar.png'
+import Rating from "./Rating";
 
-function Book(props) {
+const BookCard = (props) => {
 
   const [isFlipped, setFlipped] = useState(false);
 
@@ -25,7 +26,7 @@ function Book(props) {
         </div>
         <div style={styles.cardContentRight}>
           <img style={styles.calendarImage} src={calendarLogo} alt="calendar-icon" />
-          <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate}</p>
+          <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate === '' ? 'Present' : props.book.endDate }</p>
         </div>
       </div>
 
@@ -36,8 +37,9 @@ function Book(props) {
           <p style={styles.titleText}>TL;DR</p>
           <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
         </div>
-        <div style={{backgroundColor: 'blue', width: 225, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <p style={{backgroundColor: 'red', padding: 10}}>rating will go here</p>
+        <div style={{width: 225, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          {/*<p style={{backgroundColor: 'red', padding: 10}}>rating will go here</p>*/}
+          <Rating rating={props.book.rating}/>
         </div>
       </div>
     </ReactCardFlip>
@@ -112,4 +114,4 @@ const styles = {
   }
 }
 
-export default Book;
+export default BookCard;
