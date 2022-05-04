@@ -1,6 +1,8 @@
 import './App.css';
-import BookCard from './components/BookCard'
 import Footer from "./components/Footer";
+import BookList from './components/BookList'
+import {useMediaQuery} from "react-responsive";
+import Quotes from "./components/Quotes";
 
 const data = {
   books : [
@@ -25,40 +27,51 @@ const data = {
       endDate: 'Feb 5',
       rating: 3
     },
+    {
+      title: 'Fortune\'s Formula',
+      author: 'William Poundstone',
+      startDate: 'April 27',
+      endDate: '',
+      rating: 0
+    },
+    {
+      title: 'Huckleberry Finn',
+      author: 'Mark Twain',
+      startDate: 'April 27',
+      endDate: 'May 5',
+      rating: 2
+    },
+    {
+      title: 'Atomic Habit',
+      author: 'James Clear',
+      startDate: 'Jan 28',
+      endDate: 'Feb 5',
+      rating: 3
+    }
   ]
 }
 
 function App() {
 
-  return (
-    <div style={styles.pagContent}>
-      <div style={styles.titleContainer}>
-        <p style={styles.titleText}>Hyden's Bookshelf</p>
-        <div style={styles.gradientDiv}></div>
-      </div>
-      <div style={styles.quotesDiv}>
-        <div style={styles.quote}>
-          <p style={styles.quoteText}>“I just sit in my office and read all day.”</p>
-          <p style={styles.quoteAuthor}>Warren Buffet</p>
-        </div>
-        <div style={{textAlign: 'right'}}>
-          <div style={styles.quote}>
-            <p style={styles.quoteText}>“Classic’ - a book which people praise and don’t read.”</p>
-            <p style={styles.quoteAuthor}>Mark Twain</p>
-          </div>
-        </div>
-      </div>
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 650px)' });
 
-      <div style={styles.listContainer}>
-        <BookCard book={data.books[0]}/>
-        <BookCard book={data.books[1]}/>
-        <BookCard book={data.books[2]}/>
-        <BookCard book={data.books[1]}/>
-        <BookCard book={data.books[1]}/>
-        <BookCard book={data.books[1]}/>
+  return (
+    <div style={{position: 'relative', minHeight: '100vh'}}>
+      <div style={{paddingBottom: isTabletOrMobile ? 50 : 100, width: '100%'}}>
+        <div style={styles.pagContent}>
+
+        {/* Title and gradient to disappear */}
+        <div style={styles.titleContainer}>
+          <p style={{...styles.titleText, fontSize: isTabletOrMobile ? 32 : 64}}>Hyden's Bookshelf</p>
+          <div style={{...styles.gradientDiv, height: isTabletOrMobile ? 30 : 50}}></div>
+        </div>
+
+        <Quotes />
+        <BookList books={data.books}/>
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 }
@@ -81,12 +94,6 @@ const styles = {
   gradientDiv: {
     height: 50,
     background: 'linear-gradient(white, transparent 100%)',
-  },
-  listContainer: {
-    width: '70%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems:'center',
   },
   titleText: {
     fontFamily: 'Roboto',

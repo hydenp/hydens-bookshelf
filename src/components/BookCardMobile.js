@@ -5,7 +5,7 @@ import bookLogo from '../assets/open-book.png'
 import calendarLogo from '../assets/calendar.png'
 import Rating from "./Rating";
 
-const BookCard = (props) => {
+const BookCardMobile = (props) => {
 
   const [isFlipped, setFlipped] = useState(false);
 
@@ -26,17 +26,22 @@ const BookCard = (props) => {
         </div>
         <div style={styles.cardContentRight}>
           <img style={styles.calendarImage} src={calendarLogo} alt="calendar-icon" />
-          <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate === '' ? 'Present' : props.book.endDate }</p>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
+            <p style={styles.dateText}>{props.book.startDate}</p>
+            <p style={styles.dateText}>{props.book.endDate === '' ? 'Present' : props.book.endDate}</p>
+          </div>
         </div>
       </div>
 
       {/*Back of Card */}
       <div style={styles.cardBody} onClick={handleClick}>
+        {/*<div style={{backgroundColor: 'green', width: '100%'}}>*/}
         <div style={{width: '100%', padding: 20}}>
           <p style={styles.titleText}>TL;DR</p>
           <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
         </div>
-        <div style={{width: 225, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{width: 100, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          {/*<p style={{backgroundColor: 'red', padding: 10}}>rating will go here</p>*/}
           <Rating rating={props.book.rating}/>
         </div>
       </div>
@@ -52,8 +57,8 @@ const styles = {
   },
   cardBody : {
     height: 'auto',
-    padding: 20,
-    margin: 20,
+    padding: 10,
+    margin: 10,
     display: 'flex',
     justifyContent: 'space-evenly',
     borderRadius: 10,
@@ -65,19 +70,19 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
   },
   cardContentRight: {
     width: '35%',
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
   },
   bookImage: {
-    width: 50,
-    height: 50,
-    marginRight: 20,
+    width: 25,
+    height: 25,
+    marginRight: 15,
   },
   titleAuthor: {
     display: 'flex',
@@ -85,23 +90,24 @@ const styles = {
     alignContent: 'center',
   },
   titleText: {
-    fontSize: 32,
+    fontSize: 16,
     margin: 0,
-    marginBottom: 10,
+    marginBottom: 5,
     fontWeight: 'bold',
   },
   authorText: {
-    fontSize: 16,
+    fontSize: 12,
     color: '#6C6C6C',
     margin: 0,
   },
   calendarImage: {
-    width: 25,
+    width: 15,
     margin: 10,
   },
   dateText: {
-    fontSize: 16
+    fontSize: 12,
+    margin: 2
   }
 }
 
-export default BookCard;
+export default BookCardMobile;
