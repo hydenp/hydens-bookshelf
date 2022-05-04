@@ -8,6 +8,7 @@ import Rating from "./Rating";
 const BookCard = (props) => {
 
   const [isFlipped, setFlipped] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
   const handleClick = () => {
     setFlipped(!isFlipped);
@@ -16,7 +17,9 @@ const BookCard = (props) => {
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" containerStyle={styles.cardContainer}>
       {/* Front of Card */}
-      <div style={styles.cardBody} onClick={handleClick}>
+      <div style={{...styles.cardBody, backgroundColor: isShown ? '#EAEAEA' : '#FCFCFC'}} onClick={handleClick}
+           onMouseEnter={() => setIsShown(true)}
+           onMouseLeave={() => setIsShown(false)}>
         <div style={styles.cardContentLeft}>
           <img style={styles.bookImage} src={bookLogo} alt="open-book-icon" />
           <div style={styles.titleAuthor}>
@@ -31,7 +34,9 @@ const BookCard = (props) => {
       </div>
 
       {/*Back of Card */}
-      <div style={styles.cardBody} onClick={handleClick}>
+      <div style={{...styles.cardBody, backgroundColor: isShown ? '#EAEAEA' : '#FCFCFC'}} onClick={handleClick}
+           onMouseEnter={() => setIsShown(true)}
+           onMouseLeave={() => setIsShown(false)}>
         <div style={{width: '100%', padding: 20}}>
           <p style={styles.titleText}>TL;DR</p>
           <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
