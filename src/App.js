@@ -1,5 +1,6 @@
 import './App.css';
 import BookCard from './components/BookCard'
+import Footer from "./components/Footer";
 
 const data = {
   books : [
@@ -56,6 +57,8 @@ function App() {
         <BookCard book={data.books[1]}/>
         <BookCard book={data.books[1]}/>
       </div>
+
+      <Footer />
     </div>
   );
 }
