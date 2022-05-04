@@ -35,13 +35,11 @@ const BookCardMobile = (props) => {
 
       {/*Back of Card */}
       <div style={styles.cardBody} onClick={handleClick}>
-        {/*<div style={{backgroundColor: 'green', width: '100%'}}>*/}
         <div style={{width: '100%', padding: 20}}>
           <p style={styles.titleText}>TL;DR</p>
-          <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
+          <p style={styles.authorText}>{props.book.tldr === '' ? 'No thoughts yet' : props.book.tldr}</p>
         </div>
         <div style={{width: 100, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          {/*<p style={{backgroundColor: 'red', padding: 10}}>rating will go here</p>*/}
           <Rating rating={props.book.rating}/>
         </div>
       </div>
@@ -66,14 +64,14 @@ const styles = {
     boxShadow: '7px 7px 12px rgba(0, 0, 0, 0.25)'
   },
   cardContentLeft: {
-    width: '65%',
+    width: '60%',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: 10,
   },
   cardContentRight: {
-    width: '35%',
+    width: '40%',
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',

@@ -1,0 +1,164 @@
+{
+  "books": [
+    {
+      "title": "Fortune's Formula",
+      "author": "William Poundstone",
+      "genre": "Fiction",
+      "rating": 0,
+      "startDate": "Apr 23",
+      "endDate": "",
+      "year": 2022,
+      "tldr":""
+    },
+    {
+      "title": "The Captive",
+      "author": "Fiona King Foster",
+      "genre": "Novel",
+      "rating": 2,
+      "startDate": "Mar 22",
+      "endDate": "Mar 25",
+      "year": 2022,
+      "tldr":"A fun fast read. I enjoyed while on a short trip to Mexico."
+    },
+    {
+      "title": "Guide To Getting It On",
+      "author": "Paul Joannides",
+      "genre": "Self-help",
+      "rating": 3,
+      "startDate": "Feb 05",
+      "endDate": "Apr 22",
+      "year": 2022,
+      "tldr": ""
+    },
+    {
+      "title": "Zucked",
+      "author": "Roger McNamee",
+      "genre": "Political Science",
+      "rating": 0,
+      "startDate": "Jan 24",
+      "endDate": "Feb 17",
+      "year": 2022,
+      "tldr": ""
+    },
+    {
+      "title": "The Searcher",
+      "author": "Tana French",
+      "genre": "Novel",
+      "rating": 2,
+      "startDate": "Dec 26",
+      "endDate": "Jan 23",
+      "year": 2022,
+      "tldr": ""
+    },
+    {
+      "title": "American Kingpin",
+      "author": "Nick Bilton",
+      "genre": "Biography, True Crime",
+      "rating": 3,
+      "startDate": "Dec 17",
+      "endDate": "Dec 22",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "Geek Sublime",
+      "author": "Vikram Chandra",
+      "genre": "Biography",
+      "rating": 2,
+      "startDate": "Dec 09",
+      "endDate": "Dec 17",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The Essential of Theory U",
+      "author": "C. Otto Scharmer",
+      "genre": "Self-help",
+      "rating": 0,
+      "startDate": "Oct 28",
+      "endDate": "Nov 26",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The 4-Hour Work Week",
+      "author": "TImothy Ferriss",
+      "genre": "Nonfiction, Self-help",
+      "rating": 1,
+      "startDate": "Aug 31",
+      "endDate": "Oct 16",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "Slaughterhouse Five",
+      "author": "Kurt Vonnegut",
+      "genre": "Autobiography, Novel, War Drama",
+      "rating": 2,
+      "startDate": "Aug 10",
+      "endDate": "Aug 13",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The Crying of Lot 49",
+      "author": "Thomas Pynchon",
+      "genre": "Novel, Postmodern",
+      "rating": 1,
+      "startDate": "Jun 15",
+      "endDate": "Aug 05",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-help",
+      "rating": 3,
+      "startDate": "Jan 28",
+      "endDate": "Feb 05",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "genre": "Self-help",
+      "rating": 3,
+      "startDate": "Jan 11",
+      "endDate": "Jan 17",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The Master Algorithm",
+      "author": "Pedro Domingos",
+      "genre": "Science, Technology",
+      "rating": 2,
+      "startDate": "Mar 28",
+      "endDate": "May 22",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Dystopian Fiction, Novel, Science Fiction",
+      "rating": 2,
+      "startDate": "Dec 25",
+      "endDate": "Jan 02",
+      "year": 2021,
+      "tldr": ""
+    },
+    {
+      "title": "The Fourth Industrial Revoultion",
+      "author": "Klause Schwab",
+      "genre": "Economics, Science",
+      "rating": 2,
+      "startDate": "Feb 06",
+      "endDate": "Mar 16",
+      "year": 2021,
+      "tldr": ""
+    }
+  ]
+}

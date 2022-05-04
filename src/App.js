@@ -4,52 +4,8 @@ import BookList from './components/BookList'
 import {useMediaQuery} from "react-responsive";
 import Quotes from "./components/Quotes";
 
-const data = {
-  books : [
-    {
-      title: 'Fortune\'s Formula',
-      author: 'William Poundstone',
-      startDate: 'April 27',
-      endDate: '',
-      rating: 0
-    },
-    {
-      title: 'Huckleberry Finn',
-      author: 'Mark Twain',
-      startDate: 'April 27',
-      endDate: 'May 5',
-      rating: 2
-    },
-    {
-      title: 'Atomic Habit',
-      author: 'James Clear',
-      startDate: 'Jan 28',
-      endDate: 'Feb 5',
-      rating: 3
-    },
-    {
-      title: 'Fortune\'s Formula',
-      author: 'William Poundstone',
-      startDate: 'April 27',
-      endDate: '',
-      rating: 0
-    },
-    {
-      title: 'Huckleberry Finn',
-      author: 'Mark Twain',
-      startDate: 'April 27',
-      endDate: 'May 5',
-      rating: 2
-    },
-    {
-      title: 'Atomic Habit',
-      author: 'James Clear',
-      startDate: 'Jan 28',
-      endDate: 'Feb 5',
-      rating: 3
-    }
-  ]
-}
+import data from './books.json'
+
 
 function App() {
 

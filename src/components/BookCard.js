@@ -29,7 +29,7 @@ const BookCard = (props) => {
         </div>
         <div style={styles.cardContentRight}>
           <img style={styles.calendarImage} src={calendarLogo} alt="calendar-icon" />
-          <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate === '' ? 'Present' : props.book.endDate }</p>
+          <p style={styles.dateText}>{props.book.startDate} - {props.book.endDate === '' ? 'Present' : props.book.endDate } | {props.book.year}</p>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ const BookCard = (props) => {
            onMouseLeave={() => setIsShown(false)}>
         <div style={{width: '100%', padding: 20}}>
           <p style={styles.titleText}>TL;DR</p>
-          <p style={styles.authorText}>Here is some content about the book. I really did like it quite a lot, beyond that not sure what to say at this point </p>
+          <p style={styles.authorText}>{props.book.tldr === '' ? 'No thoughts yet' : props.book.tldr}</p>
         </div>
         <div style={{width: 225, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <Rating rating={props.book.rating}/>
