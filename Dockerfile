@@ -13,7 +13,7 @@ EXPOSE 3000
 
 CMD ["npm", "run", "start"]
 
-FROM node:16.13.2-alpine AS builder
+FROM --platform=linux/amd64 node:16.13.2-alpine AS builder
 
 ENV NODE_ENV production
 WORKDIR /app
@@ -24,10 +24,8 @@ COPY . .
 
 RUN ["npm", "run", "build"]
 
-FROM nginx:1-alpine AS production
+FROM --platform=linux/amd64 nginx:1-alpine AS production
 COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-
-
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
