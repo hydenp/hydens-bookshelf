@@ -1,12 +1,32 @@
 {
   "books": [
     {
+      "title": "Outliers",
+      "author": "Malcolm Gladwell",
+      "genre": "Nonfiction",
+      "rating": 0,
+      "startDate": "Jun 5",
+      "endDate": "",
+      "year": 2022,
+      "tldr":""
+    },
+    {
+      "title": "Predictably Irrational",
+      "author": "Dan Ariely",
+      "genre": "Nonfiction",
+      "rating": 2,
+      "startDate": "May 11",
+      "endDate": "May 27",
+      "year": 2022,
+      "tldr":""
+    },
+    {
       "title": "Fortune's Formula",
       "author": "William Poundstone",
       "genre": "Fiction",
-      "rating": 0,
+      "rating": 3,
       "startDate": "Apr 23",
-      "endDate": "",
+      "endDate": "May 10",
       "year": 2022,
       "tldr":""
     },
